@@ -16,7 +16,7 @@ echo "It works." > /tmp/test.html
 ```
 2. You can run the webserver against the previous directory typing:
 ```
-docker run --rm -itd -v /tmp:/root/media -p 8080:8080 jcenzano/docker-webserver-chunked-growingfiles /root/media -a 0.0.0.0 -p 8080 
+docker run --rm -itd -v /tmp:/root/media -p 8080:8080 jcenzano/docker-webserver-chunked-growingfiles /root/media 8080
 ```
 The previous command offer through HTTP the contents of local `/tmp/` dir
 
