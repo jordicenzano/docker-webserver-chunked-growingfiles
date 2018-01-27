@@ -14,6 +14,9 @@ DOCKER_IMAGE_VERSION = 1.0
 build: Dockerfile
 	docker build -t $(DOCKER_REPO_USER)/$(DOCKER_IMAGE_NAME):$(DOCKER_IMAGE_VERSION) --rm .
 
+buildnc: Dockerfile
+	docker build --no-cache -t $(DOCKER_REPO_USER)/$(DOCKER_IMAGE_NAME):$(DOCKER_IMAGE_VERSION) --rm .
+
 tag_latest:
 	docker tag $(DOCKER_REPO_USER)/$(DOCKER_IMAGE_NAME):$(DOCKER_IMAGE_VERSION) $(DOCKER_REPO_USER)/$(DOCKER_IMAGE_NAME):latest
 

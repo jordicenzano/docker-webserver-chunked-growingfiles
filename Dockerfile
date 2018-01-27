@@ -31,4 +31,4 @@ RUN apt-get clean
 
 # Start
 ENTRYPOINT ["/webserver-chunked-growingfiles/./index.js"]
-CMD [". 8080"]
+CMD ["-p 8080"]
